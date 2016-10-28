@@ -1,2 +1,2 @@
 # JourneyDiary
-asp.net mv c配合传统事务脚本模式的开发架构
+asp.net mvc配合传统事务脚本模式的开发架构
