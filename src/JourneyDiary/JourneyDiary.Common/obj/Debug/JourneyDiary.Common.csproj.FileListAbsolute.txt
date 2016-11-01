@@ -1,0 +1,4 @@
+C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Common\bin\Debug\JourneyDiary.Common.dll
+C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Common\bin\Debug\JourneyDiary.Common.pdb
+C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Common\obj\Debug\JourneyDiary.Common.dll
+C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Common\obj\Debug\JourneyDiary.Common.pdb

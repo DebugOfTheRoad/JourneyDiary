@@ -1,0 +1,40 @@
+﻿@using System.Configuration
+@using StackExchange.Profiling
+@model List<JourneyDiary.Web.Models.CustomerModel>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>用户注册</title>
+    </head>
+    <body>
+        <div>
+            <ul>
+               @foreach (var customerModel in Model)
+               {
+                   <li>@customerModel.Phone</li>
+               }
+            </ul>
+        </div>
+
+        <div>
+            <form action="/Customer/Register" method="POST">
+                
+                <input name="phone" placeholder="用户名"/>
+                <input name="password" placeholder="密码"/>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </body>
+       @if (bool.Parse(ConfigurationManager.AppSettings["OpenMiniProfiler"]))
+       {
+           @MiniProfiler.RenderIncludes()
+       }
+      
+</html>
