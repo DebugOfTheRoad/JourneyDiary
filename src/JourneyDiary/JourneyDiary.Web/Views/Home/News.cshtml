@@ -1,0 +1,52 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <div id="containter">
+            @{
+                Html.RenderAction("RenderNews", "Home");
+            }
+        </div>
+
+        <a href="javascript:void(0)" data-link="/Home/RenderNews?pageIndex=1&pageSize=10">第1页</a>
+        <a href="javascript:void(0)" data-link="/Home/RenderNews?pageIndex=2&pageSize=10">第2页</a>
+        <a href="javascript:void(0)" data-link="/Home/RenderNews?pageIndex=3&pageSize=10">第3页</a>
+        ....
+
+        <script src="~/static/js/lib/jquery-3.1.1.js"></script>
+        <script>
+            $("a").click(function() {
+                var link = $(this).attr("data-link");
+                $.ajax({
+                    url: link,
+                    type: "POST",
+                    beforeSend: function() {
+
+                    },
+                    complete: function() {
+
+                    },
+                    success: function(result) {
+                        if (result.trim() != "") {
+                            $("#containter").html(result);
+                        }
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    }
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

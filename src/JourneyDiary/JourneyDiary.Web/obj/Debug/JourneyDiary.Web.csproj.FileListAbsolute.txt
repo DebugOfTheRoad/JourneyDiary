@@ -77,7 +77,6 @@ C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Web\bin\Mi
 C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Web\bin\MiniProfiler.xml
 C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Web\bin\MiniProfiler.Mvc.dll
 C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Web\bin\MiniProfiler.Mvc.pdb
-C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\obj\Debug\JourneyDiary.Web.csprojResolveAssemblyReference.cache
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\JourneyDiary.Web.dll
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\JourneyDiary.Web.pdb
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\Antlr3.Runtime.dll
@@ -156,5 +155,6 @@ C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bi
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\obj\Debug\JourneyDiary.Web.csprojResolveAssemblyReference.cache
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\obj\Debug\JourneyDiary.Web.dll
 C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Web\obj\Debug\JourneyDiary.Web.pdb
