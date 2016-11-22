@@ -1,0 +1,15 @@
+﻿@model dynamic
+@{
+    Layout = null;
+}
+<ul>
+    @{
+        //模拟数据
+        var random = new Random();
+        for (int i = 0; i < 10; i++)
+        {
+            <li>@random.Next(1,100)</li>
+        }
+    }
+</ul>
+

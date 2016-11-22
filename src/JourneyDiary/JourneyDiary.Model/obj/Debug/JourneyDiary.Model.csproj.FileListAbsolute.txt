@@ -1,8 +1,0 @@
-C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Model\bin\Debug\JourneyDiary.Model.dll
-C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Model\bin\Debug\JourneyDiary.Model.pdb
-C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Model\obj\Debug\JourneyDiary.Model.dll
-C:\Users\John\Desktop\mysource\JourneyDiary\JourneyDiary\JourneyDiary.Model\obj\Debug\JourneyDiary.Model.pdb
-C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Model\bin\Debug\JourneyDiary.Model.dll
-C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Model\bin\Debug\JourneyDiary.Model.pdb
-C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Model\obj\Debug\JourneyDiary.Model.dll
-C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary\JourneyDiary.Model\obj\Debug\JourneyDiary.Model.pdb
