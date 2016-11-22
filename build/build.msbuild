@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Compile">
    <ItemGroup>
  		<ReleaseDir Include="..\release\" />
-	    <SolutionFile Include="C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary.sln" />
+	    <SolutionFile Include="..\src\JourneyDiary.sln" />
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -16,7 +16,6 @@
 	<Target Name="Init" DependsOnTargets="Clean">
 		 <MakeDir Directories="@(ReleaseDir)" />
 	</Target>
-
 
 
 	<Target Name="Compile" DependsOnTargets="Init">
