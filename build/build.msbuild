@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Compile">
    <ItemGroup>
- 		<BuildArtifactsDir Include="release\" />
+ 		<ReleaseDir Include="..\release\" />
 	    <SolutionFile Include="C:\Users\John\Desktop\mysource\JourneyDiary\src\JourneyDiary.sln" />
 	</ItemGroup>
 
@@ -10,17 +10,17 @@
 	</PropertyGroup>
 
 	<Target Name="Clean">
-	 	<RemoveDir Directories="@(BuildArtifactsDir)" />
+	 	<RemoveDir Directories="@(ReleaseDir)" />
 	</Target>
 
 	<Target Name="Init" DependsOnTargets="Clean">
-		 <MakeDir Directories="@(BuildArtifactsDir)" />
+		 <MakeDir Directories="@(ReleaseDir)" />
 	</Target>
 
 
 
 	<Target Name="Compile" DependsOnTargets="Init">
 		 <MSBuild Projects="@(SolutionFile)" Targets="Rebuild"
-		          Properties="OutDir=%(BuildArtifactsDir.FullPath);Configuration=$(Configuration);Platform=$(BuildPlatform)" />
+		          Properties="OutDir=%(ReleaseDir.FullPath);Configuration=$(Configuration);Platform=$(BuildPlatform)" />
 	</Target>
 </Project>
