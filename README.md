@@ -10,3 +10,4 @@
 ##build文件夹说明
 ### build.bat 为编译脚本，输出路径默认为src同级目录release文件下
 ### deploy.bat 为自动部署脚本，使用Robocopy将release下的文件复制到远程服务器目录。
+### build.msbuild为Jenkins 使用msbuild需要的参数文件,如果使用build.bat脚本进行编译也会用到此文件。
