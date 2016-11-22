@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using StackExchange.Profiling
+@model dynamic
 
 @{
     Layout = null;
@@ -9,6 +10,10 @@
 <html>
     <head>
         <title>title</title>
+        @if (Request.IsLocal)
+        {
+            @MiniProfiler.RenderIncludes()
+        }
     </head>
     <body>
         <div>
@@ -18,4 +23,5 @@
             </ul>  
         </div>
     </body>
+  
 </html>
