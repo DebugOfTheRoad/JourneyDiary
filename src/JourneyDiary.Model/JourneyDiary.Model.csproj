@@ -50,8 +50,10 @@
     <Compile Include="ViewModel\Validators\CustomerValidator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Caching\" />
     <Folder Include="DTO\" />
     <Folder Include="Query\" />
+    <Folder Include="Session\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

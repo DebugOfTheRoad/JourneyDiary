@@ -52,10 +52,6 @@
       <Project>{690d095a-3bba-48ce-9103-8ddc22b488d9}</Project>
       <Name>JourneyDiary.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JourneyDiary.Manager\JourneyDiary.Manager.csproj">
-      <Project>{b4c334ac-1b40-422b-a9fa-98b031479d82}</Project>
-      <Name>JourneyDiary.Manager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\JourneyDiary.Model\JourneyDiary.Model.csproj">
       <Project>{e03b2730-7062-4b09-8d01-6a4adb650b43}</Project>
       <Name>JourneyDiary.Model</Name>
