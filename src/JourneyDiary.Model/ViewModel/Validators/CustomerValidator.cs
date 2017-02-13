@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using JourneyDiary.Web.Models;
+using JourneyDiary.Model.ViewModel;
 
 namespace JourneyDiary.Web.Validators
 {

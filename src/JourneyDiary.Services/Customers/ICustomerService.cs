@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using JourneyDiary.Model.Customers;
+using JourneyDiary.Model.DataModel.Customers;
 
 namespace JourneyDiary.Services.Customers
 {

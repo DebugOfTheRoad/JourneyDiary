@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using AutoMapper;
-using JourneyDiary.Model.Customers;
+using JourneyDiary.Model.DataModel.Customers;
+using JourneyDiary.Model.ViewModel;
 using JourneyDiary.Services.Customers;
 using JourneyDiary.Web.Extension;
-using JourneyDiary.Web.Models;
 
 namespace JourneyDiary.Web.Controllers
 {

@@ -1,7 +1,7 @@
 ﻿using FluentValidation.Attributes;
 using JourneyDiary.Web.Validators;
 
-namespace JourneyDiary.Web.Models
+namespace JourneyDiary.Model.ViewModel
 {
     [Validator(typeof(CustomerValidator))]
     public class CustomerModel

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JourneyDiary.Model.Customers
+namespace JourneyDiary.Model.DataModel.Customers
 {
     public class Customer:BaseEntity
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using JourneyDiary.Model.Customers;
-using JourneyDiary.Web.Models;
+using JourneyDiary.Model.DataModel.Customers;
+using JourneyDiary.Model.ViewModel;
 
 namespace JourneyDiary.Web
 {
