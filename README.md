@@ -1,5 +1,6 @@
 ## 项目简介
 ### asp.net mvc配合传统事务脚本模式开发架构
+***
 ## 相关技术
 ### 使用FluentValidation进行数据校验。  
 ### 使用Autofac进行依赖注入。
