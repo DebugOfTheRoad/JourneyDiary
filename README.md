@@ -1,6 +1,9 @@
 ## 项目简介
+
 - asp.net mvc配合传统事务脚本模式开发架构
+
 ***
+
 ## 相关技术
 - 使用FluentValidation进行数据校验。  
 - 使用Autofac进行依赖注入。
@@ -18,7 +21,9 @@
 - JourneyDiary.Data     数据库访问层
 - JourneyDiary.Model    模型层，DTO：Service和Manager向外传输的对象，DataModel: 与数据库表结构一一对应，通过数据库访问层向上传输数据源对象 
 - JourneyDiary.Common   公共组件以及工具类库
+
 ***
+
 ## 持续集成build文件夹说明
 - build.bat 为编译脚本，输出路径默认为src同级目录release文件下
 - deploy.bat 为自动部署脚本，使用Robocopy将release下的文件复制到远程服务器目录。
