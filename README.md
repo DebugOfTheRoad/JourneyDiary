@@ -1,15 +1,16 @@
 ## 项目简介
-### asp.net mvc配合传统事务脚本模式开发架构
+- asp.net mvc配合传统事务脚本模式开发架构
 ***
 ## 相关技术
-### 使用FluentValidation进行数据校验。  
-### 使用Autofac进行依赖注入。
-### 使用AutoMapper进行Model之间的的转换
-### 使用Dapper操作数据库
-### 使用Miniprofiler进行SQL和页面监控
-### 使用Jenkins进行持续集成
+- 使用FluentValidation进行数据校验。  
+- 使用Autofac进行依赖注入。
+- 使用AutoMapper进行Model之间的的转换
+- 使用Dapper操作数据库
+- 使用Miniprofiler进行SQL和页面监控
+- 使用Jenkins进行持续集成
 
 ***
+
 ## 项目架构
 ### JourneyDiary.Web      表现层，处理业务渲染，权限控制等简单业务处理
 ### JourneyDiary.Services 业务逻辑层
