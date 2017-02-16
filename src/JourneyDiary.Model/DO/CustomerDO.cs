@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace JourneyDiary.Model.DataModel.Customers
+namespace JourneyDiary.Model.DO
 {
-    public class Customer:BaseEntity
+    public class CustomerDO:BaseEntity
     {
         /// <summary>
         ///  手机号

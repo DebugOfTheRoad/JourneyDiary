@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using JourneyDiary.Model.DataModel.Customers;
+using JourneyDiary.Model.DO;
 
 namespace JourneyDiary.Services.Customers
 {
     public interface ICustomerService
     {
-        int AddCustomer(Customer customer);
+        int AddCustomer(CustomerDO customerDo);
 
-        List<Customer> GetAllCustomers();
+        List<CustomerDO> GetAllCustomers();
     }
 }

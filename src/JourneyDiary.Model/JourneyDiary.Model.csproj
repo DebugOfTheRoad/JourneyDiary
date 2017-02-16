@@ -44,17 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
-    <Compile Include="DataModel\Customers\Customer.cs" />
+    <Compile Include="BO\CustomerBO.cs" />
+    <Compile Include="DO\CustomerDO.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\CustomerModel.cs" />
-    <Compile Include="ViewModel\Validators\CustomerValidator.cs" />
+    <Compile Include="Query\CustomerQuery.cs" />
+    <Compile Include="VO\CustomerVO.cs" />
+    <Compile Include="VO\Validators\CustomerValidator.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Caching\" />
-    <Folder Include="DTO\" />
-    <Folder Include="Query\" />
-    <Folder Include="Session\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

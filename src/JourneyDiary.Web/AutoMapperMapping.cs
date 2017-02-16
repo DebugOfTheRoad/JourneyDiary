@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using JourneyDiary.Model.DataModel.Customers;
-using JourneyDiary.Model.ViewModel;
+using JourneyDiary.Model.DO;
+using JourneyDiary.Model.VO;
 
 namespace JourneyDiary.Web
 {
@@ -12,8 +12,8 @@ namespace JourneyDiary.Web
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<CustomerModel, Customer>();
-                cfg.CreateMap<Customer, CustomerModel>();
+                cfg.CreateMap<CustomerVO, CustomerDO>();
+                cfg.CreateMap<CustomerDO, CustomerVO>();
             });
 
             Mapper = config.CreateMapper();

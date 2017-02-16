@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using AutoMapper;
-using JourneyDiary.Model.DataModel.Customers;
-using JourneyDiary.Model.ViewModel;
+using JourneyDiary.Model.DO;
+using JourneyDiary.Model.VO;
 using JourneyDiary.Services.Customers;
 using JourneyDiary.Web.Extension;
 
@@ -24,12 +24,12 @@ namespace JourneyDiary.Web.Controllers
         public ActionResult Index()
         {
             var customers=_customerService.GetAllCustomers();
-            var customerModels= _mapper.Map<List<CustomerModel>>(customers);
+            var customerModels= _mapper.Map<List<CustomerVO>>(customers);
             return View(customerModels);
         }
 
         [HttpPost]
-        public ActionResult Register(CustomerModel customerModel)
+        public ActionResult Register(CustomerVO customerVo)
         {
             if (!ModelState.IsValid)
             {
@@ -37,7 +37,7 @@ namespace JourneyDiary.Web.Controllers
                 return Content(ModelState.ToErrorMessage());
             }
 
-            var customer = _mapper.Map<Customer>(customerModel);
+            var customer = _mapper.Map<CustomerDO>(customerVo);
             customer.CreateTime = DateTime.Now;
             _customerService.AddCustomer(customer);
             return Content("ok");

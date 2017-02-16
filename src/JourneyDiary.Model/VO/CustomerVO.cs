@@ -1,10 +1,10 @@
 ﻿using FluentValidation.Attributes;
-using JourneyDiary.Web.Validators;
+using JourneyDiary.Model.VO.Validators;
 
-namespace JourneyDiary.Model.ViewModel
+namespace JourneyDiary.Model.VO
 {
     [Validator(typeof(CustomerValidator))]
-    public class CustomerModel
+    public class CustomerVO
     {
         public string Phone { get; set; }
 
