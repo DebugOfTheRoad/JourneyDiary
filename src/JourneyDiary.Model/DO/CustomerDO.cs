@@ -2,7 +2,7 @@
 
 namespace JourneyDiary.Model.DO
 {
-    public class CustomerDO:BaseEntity
+    public class CustomerDO:BaseDO
     {
         /// <summary>
         ///  手机号
