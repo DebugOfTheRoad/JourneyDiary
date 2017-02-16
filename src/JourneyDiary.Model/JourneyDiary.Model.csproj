@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEntity.cs" />
+    <Compile Include="DO\BaseDO.cs" />
     <Compile Include="BO\CustomerBO.cs" />
     <Compile Include="DO\CustomerDO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
