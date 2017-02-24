@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using AutoMapper;
@@ -21,8 +23,18 @@ namespace JourneyDiary.Web
 
 
             //业务逻辑
-            builder.RegisterType<CustomerService>().As<ICustomerService>().InstancePerLifetimeScope();
+            var services = AppDomain.CurrentDomain.GetAssemblies().
+                Where(a => a.FullName.Contains("JourneyDiary.Services")).ToArray();
+            builder.RegisterAssemblyTypes(services)
+           .Where(t => t.Name.EndsWith("Service"))
+            .AsImplementedInterfaces().InstancePerLifetimeScope();
 
+            //通用业务层
+            var managers = AppDomain.CurrentDomain.GetAssemblies().
+              Where(a => a.FullName.Contains("JourneyDiary.Manager")).ToArray();
+            builder.RegisterAssemblyTypes(managers)
+           .Where(t => t.Name.EndsWith("Manager"))
+            .AsImplementedInterfaces().InstancePerLifetimeScope();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

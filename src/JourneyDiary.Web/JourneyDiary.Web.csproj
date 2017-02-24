@@ -159,6 +159,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MonitorController.cs" />
     <Compile Include="DependencyRegistrar.cs" />
     <Compile Include="Extension\ModelStateExtension.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\RenderNews.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Monitor\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
