@@ -4,7 +4,8 @@ using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
 using AutoMapper;
-using JourneyDiary.Services.Customers;
+using JourneyDiary.Common.Caching;
+using JourneyDiary.Common.Session;
 
 namespace JourneyDiary.Web
 {
@@ -36,12 +37,9 @@ namespace JourneyDiary.Web
            .Where(t => t.Name.EndsWith("Data"))
             .AsImplementedInterfaces().InstancePerLifetimeScope();
 
-            //公共处理
-            var managers = AppDomain.CurrentDomain.GetAssemblies().
-              Where(a => a.FullName.Contains("JourneyDiary.Common")).ToArray();
-            builder.RegisterAssemblyTypes(managers)
-           .Where(t => t.Name.EndsWith("Manager"))
-            .AsImplementedInterfaces().InstancePerLifetimeScope();
+            //公共组件
+            builder.RegisterType<AspNetCacheManager>().As<ICacheManager>().InstancePerLifetimeScope();
+            builder.RegisterType<SessionManager>().As<ISessionManager>().InstancePerLifetimeScope();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
