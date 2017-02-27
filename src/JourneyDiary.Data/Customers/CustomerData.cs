@@ -9,9 +9,9 @@ using JourneyDiary.Model.DataModel;
 
 namespace JourneyDiary.Data.Customers
 {
-    public class CustomerData
+    public class CustomerData:ICustomerData
     {
-        public static int Add(Customer customer)
+        public  int AddCustomer(Customer customer)
         {
             using (var dbConnection = ConnectionFactory.CreateConnection())
             {
@@ -23,7 +23,7 @@ namespace JourneyDiary.Data.Customers
             }
         }
 
-        public static List<Customer> GetAllCustomer()
+        public  List<Customer> GetAllCustomer()
         {
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
@@ -34,7 +34,7 @@ namespace JourneyDiary.Data.Customers
 
 
 
-        public static Customer GetCustomer(string phone)
+        public  Customer GetCustomer(string phone)
         {
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
@@ -43,7 +43,7 @@ namespace JourneyDiary.Data.Customers
             }
         }
 
-        public static int UpdatePhone(string phone, int userId)
+        public  int UpdatePhone(string phone, int userId)
         {
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {

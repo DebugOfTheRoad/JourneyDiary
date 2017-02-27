@@ -29,9 +29,16 @@ namespace JourneyDiary.Web
            .Where(t => t.Name.EndsWith("Service"))
             .AsImplementedInterfaces().InstancePerLifetimeScope();
 
-            //通用业务层
+            //数据访问层
+            var dataAccess = AppDomain.CurrentDomain.GetAssemblies().
+              Where(a => a.FullName.Contains("JourneyDiary.Data")).ToArray();
+            builder.RegisterAssemblyTypes(dataAccess)
+           .Where(t => t.Name.EndsWith("Data"))
+            .AsImplementedInterfaces().InstancePerLifetimeScope();
+
+            //公共处理
             var managers = AppDomain.CurrentDomain.GetAssemblies().
-              Where(a => a.FullName.Contains("JourneyDiary.Manager")).ToArray();
+              Where(a => a.FullName.Contains("JourneyDiary.Common")).ToArray();
             builder.RegisterAssemblyTypes(managers)
            .Where(t => t.Name.EndsWith("Manager"))
             .AsImplementedInterfaces().InstancePerLifetimeScope();

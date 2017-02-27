@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ConnectionFactory.cs" />
     <Compile Include="Customers\CustomerData.cs" />
+    <Compile Include="Customers\ICustomerData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
