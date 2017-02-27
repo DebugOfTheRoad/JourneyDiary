@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace JourneyDiary.Manager.Caching
+namespace JourneyDiary.Common.Caching
 {
     public class AspNetCacheManager:ICacheManager
     {

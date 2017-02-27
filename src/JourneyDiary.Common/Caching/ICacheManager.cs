@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JourneyDiary.Manager.Caching
+namespace JourneyDiary.Common.Caching
 {
     public interface ICacheManager
     {

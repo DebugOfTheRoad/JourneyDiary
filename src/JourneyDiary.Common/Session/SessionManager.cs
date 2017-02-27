@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Web;
-using JourneyDiary.Common;
 using Newtonsoft.Json;
 
-namespace JourneyDiary.Manager.Session
+namespace JourneyDiary.Common.Session
 {
     public class SessionManager:ISessionManager
     {

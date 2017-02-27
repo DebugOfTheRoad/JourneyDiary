@@ -1,4 +1,4 @@
-﻿namespace JourneyDiary.Manager.Session
+﻿namespace JourneyDiary.Common.Session
 {
     public interface ISessionManager
     {
