@@ -5,41 +5,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using JourneyDiary.Model.DO;
+using JourneyDiary.Model.DataModel;
 
 namespace JourneyDiary.Data.Customers
 {
     public class CustomerData
     {
-        public static int Add(CustomerDO customerDo)
+        public static int Add(Customer customer)
         {
             using (var dbConnection = ConnectionFactory.CreateConnection())
             {
                 const string sql = "insert into Customers(Phone,Password,Nick,Age,CreateTime,IsEnabled) " +
                                    "Values (@Phone,@Password,@Nick,@Age,@CreateTime,@IsEnabled);SELECT CAST(SCOPE_IDENTITY() AS INT)";
 
-                var id = dbConnection.Query<int>(sql, customerDo).Single();
+                var id = dbConnection.Query<int>(sql, customer).Single();
                 return id;
             }
         }
 
-        public static List<CustomerDO> GetAllCustomer()
+        public static List<Customer> GetAllCustomer()
         {
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
                 const string sql = "select * from Customers";
-                return dbConnection.Query<CustomerDO>(sql).ToList();
+                return dbConnection.Query<Customer>(sql).ToList();
             }
         }
 
 
 
-        public static CustomerDO GetCustomer(string phone)
+        public static Customer GetCustomer(string phone)
         {
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
                 const string sql = "select * from Customers where Phone = @phone and IsDisabled=0";
-                return dbConnection.Query<CustomerDO>(sql, new { phone }).FirstOrDefault();
+                return dbConnection.Query<Customer>(sql, new { phone }).FirstOrDefault();
             }
         }
 

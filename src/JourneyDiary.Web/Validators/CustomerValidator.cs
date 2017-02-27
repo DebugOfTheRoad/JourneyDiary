@@ -1,8 +1,9 @@
 ﻿using FluentValidation;
+using JourneyDiary.Web.Models;
 
-namespace JourneyDiary.Model.VO.Validators
+namespace JourneyDiary.Web.Validators
 {
-    public class CustomerValidator:AbstractValidator<CustomerVO>
+    public class CustomerValidator:AbstractValidator<CustomerModel>
     {
         public CustomerValidator()
         {

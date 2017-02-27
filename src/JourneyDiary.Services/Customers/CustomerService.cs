@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using JourneyDiary.Data.Customers;
-using JourneyDiary.Model.DO;
+using JourneyDiary.Model.DataModel;
 
 namespace JourneyDiary.Services.Customers
 {
     public class CustomerService:ICustomerService
     {
 
-        public int AddCustomer(CustomerDO customerDo)
+        public int AddCustomer(Customer customer)
         {
-            if (customerDo == null)
-                throw new ArgumentNullException("customerDo");
+            if (customer == null)
+                throw new ArgumentNullException("customer");
 
-           return  CustomerData.Add(customerDo);
+           return  CustomerData.Add(customer);
         }
 
-        public List<CustomerDO> GetAllCustomers()
+        public List<Customer> GetAllCustomers()
         {
             return CustomerData.GetAllCustomer();
         }
