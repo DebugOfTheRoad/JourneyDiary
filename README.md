@@ -17,7 +17,6 @@
 ## 项目架构
 - JourneyDiary.Web      表现层，处理业务渲染，权限控制等简单业务处理
 - JourneyDiary.Services 业务逻辑层
-- JourneyDiary.Manager  通用业务处理层，主要用于缓存，会话保持等通用操作以及对依赖的第三方服务接口封装
 - JourneyDiary.Data     数据库访问层
 - JourneyDiary.Model    模型层，DTO：Service和Manager向外传输的对象，DO: 与数据库表结构一一对应，通过数据库访问层向上传输数据源对象 
 - JourneyDiary.Common   公共组件以及工具类库
