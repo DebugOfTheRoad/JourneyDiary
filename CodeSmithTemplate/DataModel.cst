@@ -1,0 +1,53 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Src="BaseTemplate.cs"  Inherits="BaseTemplate" Description="Generates a class including a special informational header" %>  
+<%@ Assembly Name="SchemaExplorer" %>  
+<%@ Import Namespace="SchemaExplorer" %>  
+<%@ Import Namespace="System.Text" %>  
+<%@ Property Name="Namespace" Type="String" Category="Context" Description="命名空间" %>  
+<%@ Property Name="TableName" Type="SchemaExplorer.TableSchema" Category="Context" DeepLoad="True" Optional="False" Description="表名"%>  
+
+
+namespace <%=Namespace%>  
+{  
+   ///<Summary>  
+   /// <%=TableName.Name%><%if(TableName.Description.Length>0){%>  
+   /// <%=TableName.Description%><%}%>  
+   ///</Summary>  
+   public class <%=TableName.Name%>  
+   {  
+        <%for(int i=0;i<TableName.Columns.Count;i++){%>  
+        private <%=CSharpType(TableName.Columns[i])%> _<%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%>;  
+        <%}%>  
+    
+        public <%=TableName.Name%>()  
+        {  
+        }  
+          
+        <%for(int i=0;i<TableName.Columns.Count;i++){%>  
+        <%}%>  
+        public <%=TableName.Name%>(<%for(int i=0;i<TableName.Columns.Count;i++){%><%=CSharpType(TableName.Columns[i])%> <%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%><% if (i < TableName.Columns.Count - 1) { %>,<%}%><%}%>)  
+        {  
+        <%for(int i=0;i<TableName.Columns.Count;i++){%>  
+            this._<%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%> = <%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%>;  
+        <%}%>  
+        }   
+      
+        <%for(int i=0;i<TableName.Columns.Count;i++){%>  
+        ///<Summary>  
+        /// <%=TableName.Columns[i].Name%><%if(TableName.Columns[i].Description.Length>0){%>  
+        /// <%=TableName.Columns[i].Description%><%}%>  
+        ///</Summary>  
+        public <%=CSharpType(TableName.Columns[i]).Trim()%> <%=TableName.Columns[i].Name%>  
+        {  
+            get { return _<%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%>; }  
+            set {  _<%=TableName.Columns[i].Name.Substring(0,1).ToLower()+TableName.Columns[i].Name.Substring(1,TableName.Columns[i].Name.Length-1)%> = value; }  
+        }  
+        <%}%>  
+   }  
+}  
+
+<script runat="template">
+    public override string GetFileName()
+    {
+    	return TableName.Name+ ".cs";
+    }
+</script>

@@ -1,0 +1,72 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Src="BaseTemplate.cs" Inherits="BaseTemplate"%>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+<%@ Property Name="Namespace" Type="String" Category="配置" Description="命名空间" %>  
+<%@ Property Name="TableName" Type="SchemaExplorer.TableSchema" Category="配置" DeepLoad="True" Optional="False" Description="表名"%>  
+<%@ Property Name="DataModelNamespace" Type="String" Category="配置" Description="数据模型命名空间" Optional="False" %> 
+<%@ Property Name="DataNamespace" Type="String" Category="配置" Description="数据访问层命名空间" Optional="False" %> 
+
+using System;
+using System.Collections.Generic;
+using <%=DataModelNamespace%>;
+using <%=DataNamespace%>;
+  
+<%
+     string primaryKeyParamName=GetPrimaryKeyName(TableName).Substring(0, 1).ToLower()+GetPrimaryKeyName(TableName).Substring(1);
+     string primaryKeyParamType=CSharpType(TableName.PrimaryKey.MemberColumns[0]); 
+     string lowerModelName=TableName.Name.Substring(0, 1).ToLower()+TableName.Name.Substring(1);
+     string privateParamData="_"+lowerModelName+"Data";
+%>
+
+namespace <%= Namespace %>
+{
+    public class <%=TableName.Name%>Service
+    {
+        private readonly <%=TableName.Name+"Data"%> <%=privateParamData%>;
+        
+        public <%=TableName.Name%>Service()
+        {
+            <%=privateParamData+"=new "+TableName.Name+"Data();"%>
+        }
+        
+        public void Insert<%=TableName.Name%>(<%=TableName.Name%> <%=lowerModelName%>)
+        {
+            <%=privateParamData+".Insert"+TableName.Name+"("+lowerModelName+")"%>;
+        }
+    
+        public void Delete<%=TableName.Name%>(<%=primaryKeyParamType%> <%=primaryKeyParamName%>)
+        {
+            <%=privateParamData+".Delete"+TableName.Name+"("+primaryKeyParamName+")"%>;
+        }
+        
+        public void Update<%=TableName.Name%>(<%=TableName.Name%> <%=lowerModelName%>)
+        {
+             <%=privateParamData+".Update"+TableName.Name+"("+lowerModelName+")"%>;
+        }
+        
+        public <%=TableName.Name%> Get<%=TableName.Name%>(<%=primaryKeyParamType%> <%=primaryKeyParamName%>)
+        {
+             return <%=privateParamData+".Get"+TableName.Name+"("+primaryKeyParamName+")"%>;
+        }
+        
+        public List<%="<"+TableName.Name+">" %> List<%=TableName.Name%>()
+        {
+             return <%=privateParamData+".List"+TableName.Name+"("+")"%>;
+        }
+        
+        public List<%="<"+TableName.Name+">" %> List<%=TableName.Name%>(int pageIndex,int pageSize)
+        {
+             return <%=privateParamData+".List"+TableName.Name+"(pageIndex"+",pageSize)"%>;
+        }
+    }
+}
+<script runat="template">
+    public override string GetFileName()
+    {
+    	return TableName.Name+ "Service.cs";
+    }
+</script>
+
