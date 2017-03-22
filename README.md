@@ -18,9 +18,7 @@
 - JourneyDiary.Web      表现层，处理业务渲染，权限控制等简单业务处理
 - JourneyDiary.Services 业务逻辑层
 - JourneyDiary.Data     数据库访问层
-- JourneyDiary.Model    模型层 
-- JourneyDiary.Common   公共组件以及工具类库
-
+- JourneyDiary.Core     核心层，包括数据模型，缓存，会话，工具类库等
 ***
 
 ## 持续集成build文件夹说明
