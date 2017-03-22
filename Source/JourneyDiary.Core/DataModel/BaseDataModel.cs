@@ -1,4 +1,4 @@
-﻿namespace JourneyDiary.Model.DataModel
+﻿namespace JourneyDiary.Core.DataModel
 {
     public class BaseDataModel
     {

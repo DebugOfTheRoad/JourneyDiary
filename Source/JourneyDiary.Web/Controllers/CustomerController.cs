@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using AutoMapper;
-using JourneyDiary.Model.DataModel;
+using JourneyDiary.Core.DataModel;
 using JourneyDiary.Services.Customers;
 using JourneyDiary.Web.Extension;
 using JourneyDiary.Web.Models;

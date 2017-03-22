@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using JourneyDiary.Core.DataModel;
 using JourneyDiary.Data.Customers;
-using JourneyDiary.Model.DataModel;
 
 namespace JourneyDiary.Services.Customers
 {

@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace JourneyDiary.Common
+namespace JourneyDiary.Common.Helper
 {
     /// <summary>
     /// 新版DES加解密算法，直接调用无需创建本类的实例。

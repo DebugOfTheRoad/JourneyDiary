@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Hosting;
 
-namespace JourneyDiary.Common
+namespace JourneyDiary.Common.Helper
 {
     public partial class CommonHelper
     {

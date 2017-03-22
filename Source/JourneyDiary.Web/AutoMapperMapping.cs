@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using JourneyDiary.Model.DataModel;
+using JourneyDiary.Core.DataModel;
 using JourneyDiary.Web.Models;
 
 namespace JourneyDiary.Web

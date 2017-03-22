@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using FluentValidation.Mvc;
 using JourneyDiary.Common;
+using JourneyDiary.Common.Helper;
 using log4net.Config;
 using StackExchange.Profiling;
 using StackExchange.Profiling.Mvc;

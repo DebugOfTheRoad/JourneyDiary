@@ -1,6 +1,6 @@
 ﻿using log4net;
 
-namespace JourneyDiary.Common
+namespace JourneyDiary.Common.Helper
 {
     public class LogHelper
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using JourneyDiary.Model.DataModel;
+using JourneyDiary.Core.DataModel;
 
 namespace JourneyDiary.Data.Customers
 {

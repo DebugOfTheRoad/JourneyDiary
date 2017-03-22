@@ -7,8 +7,8 @@
     <ProjectGuid>{2B7916AF-A652-49CD-ABA1-726A065CACC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JourneyDiary.Common</RootNamespace>
-    <AssemblyName>JourneyDiary.Common</AssemblyName>
+    <RootNamespace>JourneyDiary.Core</RootNamespace>
+    <AssemblyName>JourneyDiary.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,15 +50,18 @@
   <ItemGroup>
     <Compile Include="Caching\AspNetCacheManager.cs" />
     <Compile Include="Caching\ICacheManager.cs" />
-    <Compile Include="CommonHelper.cs" />
-    <Compile Include="DesEncryptorHelper.cs" />
-    <Compile Include="LogHelper.cs" />
-    <Compile Include="Md5Helper.cs" />
-    <Compile Include="PageHelper.cs" />
+    <Compile Include="Helper\CommonHelper.cs" />
+    <Compile Include="Helper\DesEncryptorHelper.cs" />
+    <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\Md5Helper.cs" />
+    <Compile Include="Helper\PageHelper.cs" />
+    <Compile Include="DataModel\BaseDataModel.cs" />
+    <Compile Include="DataModel\Customer.cs" />
+    <Compile Include="Query\CustomerQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session\ISessionManager.cs" />
     <Compile Include="Session\SessionManager.cs" />
-    <Compile Include="ValidateHelper.cs" />
+    <Compile Include="Helper\ValidateHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

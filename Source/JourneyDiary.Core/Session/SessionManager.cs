@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web;
+using JourneyDiary.Common.Helper;
 using Newtonsoft.Json;
 
 namespace JourneyDiary.Common.Session

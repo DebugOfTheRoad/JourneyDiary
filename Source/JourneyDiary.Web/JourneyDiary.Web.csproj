@@ -193,13 +193,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JourneyDiary.Common\JourneyDiary.Common.csproj">
-      <Project>{2b7916af-a652-49cd-aba1-726a065cacc1}</Project>
-      <Name>JourneyDiary.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JourneyDiary.Model\JourneyDiary.Model.csproj">
-      <Project>{e03b2730-7062-4b09-8d01-6a4adb650b43}</Project>
-      <Name>JourneyDiary.Model</Name>
+    <ProjectReference Include="..\JourneyDiary.Core\JourneyDiary.Core.csproj">
+      <Project>{2B7916AF-A652-49CD-ABA1-726A065CACC1}</Project>
+      <Name>JourneyDiary.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\JourneyDiary.Services\JourneyDiary.Services.csproj">
       <Project>{a16e1d6e-7921-4355-9d9e-c88123be4773}</Project>

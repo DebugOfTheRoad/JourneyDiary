@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-namespace JuiceZone.Infrastructure.Helper
+namespace JourneyDiary.Common.Helper
 {
     public static class PageHelper
      {
