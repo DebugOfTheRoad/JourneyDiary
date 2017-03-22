@@ -11,14 +11,14 @@
 - 使用Dapper操作数据库
 - 使用Miniprofiler进行SQL和页面监控
 - 使用Jenkins进行持续集成
-
+- 使用CodeSmith进行代码生成(目前没有开发接口部分的模板)
 ***
 
 ## 项目架构
 - JourneyDiary.Web      表现层，处理业务渲染，权限控制等简单业务处理
 - JourneyDiary.Services 业务逻辑层
 - JourneyDiary.Data     数据库访问层
-- JourneyDiary.Model    模型层，DTO：Service和Manager向外传输的对象，DO: 与数据库表结构一一对应，通过数据库访问层向上传输数据源对象 
+- JourneyDiary.Model    模型层 
 - JourneyDiary.Common   公共组件以及工具类库
 
 ***
