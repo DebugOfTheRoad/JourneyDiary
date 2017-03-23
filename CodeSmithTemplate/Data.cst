@@ -46,6 +46,7 @@ namespace <%= Namespace %>
              string sql="<%=result %>";
              using (var dbConnection = ConnectionFactory.CreateConnection())
              {
+             	dbConnection.Open();
                 dbConnection.Execute(sql, <%=lowerModelName%>);
              }
         }
@@ -55,6 +56,7 @@ namespace <%= Namespace %>
              string sql = "DELETE <%= TableName.Name %> WHERE <%= GetPrimaryKeyName(TableName) %> = @<%= primaryKeyParamName %>";
              using (var dbConnection = ConnectionFactory.CreateConnection())
              {
+             	 dbConnection.Open();
                  dbConnection.Execute(sql, new {<%=primaryKeyParamName%>});
              }
         }
@@ -78,6 +80,7 @@ namespace <%= Namespace %>
             
             using (var dbConnection = ConnectionFactory.CreateConnection())
             {
+            	dbConnection.Open();
                 dbConnection.Execute(sql,<%=lowerModelName%>);
             }
             
@@ -88,6 +91,7 @@ namespace <%= Namespace %>
               const string sql = "SELECT * FROM <%= TableName.Name %> WHERE <%= GetPrimaryKeyName(TableName)%> = @<%= primaryKeyParamName %>";
               using (var dbConnection = ConnectionFactory.CreateConnection())
               {
+              	  dbConnection.Open();
                   return dbConnection.Query<%="<"+TableName.Name+">"%>(sql,new {<%=primaryKeyParamName%>}).SingleOrDefault();
               }
         }
@@ -98,6 +102,7 @@ namespace <%= Namespace %>
               const string sql = "SELECT * FROM <%= TableName.Name %>";
               using (var dbConnection = ConnectionFactory.CreateConnection())
               {
+              	  dbConnection.Open();
                   return dbConnection.Query<%="<"+TableName.Name+">"%>(sql).ToList();
               }
         }
@@ -114,6 +119,7 @@ namespace <%= Namespace %>
                                   
               using (var dbConnection = ConnectionFactory.CreateConnection())
               {
+              	  dbConnection.Open();
                   return dbConnection.Query<%="<"+TableName.Name+">"%>(sql,new {startIndex,endIndex}).ToList();
               }
         }

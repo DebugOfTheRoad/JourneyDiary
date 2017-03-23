@@ -11,14 +11,13 @@ namespace JourneyDiary.Data
     {
         public static IDbConnection CreateConnection()
         {
-            DbConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["JourneyDiary"].ConnectionString);
+            DbConnection dbConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["JourneyDiary"].ConnectionString);
             if (bool.Parse(ConfigurationManager.AppSettings["OpenMiniProfiler"]))
             {
-                cnn = new StackExchange.Profiling.Data.ProfiledDbConnection(cnn, MiniProfiler.Current);
+                dbConnection = new StackExchange.Profiling.Data.ProfiledDbConnection(dbConnection, MiniProfiler.Current);
             }
 
-            cnn.Open();
-            return cnn;
+            return dbConnection;
         }
     }
 }

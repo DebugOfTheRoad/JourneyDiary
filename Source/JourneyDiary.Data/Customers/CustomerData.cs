@@ -13,11 +13,12 @@ namespace JourneyDiary.Data.Customers
     {
         public  int AddCustomer(Customer customer)
         {
-            using (var dbConnection = ConnectionFactory.CreateConnection())
-            {
-                const string sql = "insert into Customers(Phone,Password,Nick,Age,CreateTime,IsEnabled) " +
+            const string sql = "insert into Customers(Phone,Password,Nick,Age,CreateTime,IsEnabled) " +
                                    "Values (@Phone,@Password,@Nick,@Age,@CreateTime,@IsEnabled);SELECT CAST(SCOPE_IDENTITY() AS INT)";
 
+            using (var dbConnection = ConnectionFactory.CreateConnection())
+            {
+                dbConnection.Open();
                 var id = dbConnection.Query<int>(sql, customer).Single();
                 return id;
             }
@@ -25,9 +26,10 @@ namespace JourneyDiary.Data.Customers
 
         public  List<Customer> GetAllCustomer()
         {
+            const string sql = "select * from Customers";
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
-                const string sql = "select * from Customers";
+                dbConnection.Open();
                 return dbConnection.Query<Customer>(sql).ToList();
             }
         }
@@ -45,9 +47,10 @@ namespace JourneyDiary.Data.Customers
 
         public  int UpdatePhone(string phone, int userId)
         {
+            const string sql = @"update Customers set Phone = @phone where UserId = @UserId;";
             using (IDbConnection dbConnection = ConnectionFactory.CreateConnection())
             {
-                const string sql = @"update Customers set Phone = @phone where UserId = @UserId;";
+                dbConnection.Open();
                 return dbConnection.Execute(sql, new { phone, userId });
             }
         }
