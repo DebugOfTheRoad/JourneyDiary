@@ -9,8 +9,7 @@
 namespace <%=Namespace%>  
 {  
    ///<Summary>  
-   /// <%=TableName.Name%><%if(TableName.Description.Length>0){%>  
-   /// <%=TableName.Description%><%}%>  
+   ///<%if(TableName.Description.Length>0){%><%=TableName.Description%><%}%>  
    ///</Summary>  
    public class <%=TableName.Name%>  
    {  
@@ -32,9 +31,9 @@ namespace <%=Namespace%>
         }   
       
         <%for(int i=0;i<TableName.Columns.Count;i++){%>  
+        
         ///<Summary>  
-        /// <%=TableName.Columns[i].Name%><%if(TableName.Columns[i].Description.Length>0){%>  
-        /// <%=TableName.Columns[i].Description%><%}%>  
+        ///<%if(TableName.Columns[i].Description.Length>0){%><%=TableName.Columns[i].Description%><%}%>  
         ///</Summary>  
         public <%=CSharpType(TableName.Columns[i]).Trim()%> <%=TableName.Columns[i].Name%>  
         {  
