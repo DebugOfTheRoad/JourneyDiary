@@ -25,6 +25,8 @@ namespace <%= Namespace %>
 {
     public class <%=TableName.Name%>Service
     {
+        #region 系统默认
+        
         private readonly <%=TableName.Name+"Data"%> <%=privateParamData%>;
         
         public <%=TableName.Name%>Service()
@@ -61,6 +63,8 @@ namespace <%= Namespace %>
         {
              return <%=privateParamData+".List"+TableName.Name+"(pageIndex"+",pageSize)"%>;
         }
+        
+        #endregion
     }
 }
 <script runat="template">
